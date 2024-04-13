@@ -1,0 +1,45 @@
+<app-login-layout
+    title="Sign in and start today!t"
+    priBtnText="Signup Now"
+    secBtnText="Login Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePriBtx]="!signupForm.valid"
+>
+    <form [formGroup]="signupForm">
+        <app-primary-input
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="Your name"
+            placeholder="Seu nome"
+        >
+            <img src="/assets/svg/email.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="seuemail@dominio.com"
+        >
+            <img src="/assets/svg/email.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+        >
+        <img src="/assets/svg/password.svg"/>
+    </app-primary-input>
+    <app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirm your Password"
+    >
+        <img src="/assets/svg/password.svg"/>
+    </app-primary-input>
+    </form>
+</app-login-layout>

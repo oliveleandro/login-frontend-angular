@@ -1,0 +1,29 @@
+<app-login-layout
+    title="Login into your account"
+    priBtnText="Login Now"
+    secBtnText="Signup Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePriBtx]="!loginForm.valid"
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="seuemail@dominio.com"
+            >
+            <img src="/assets/svg/email.svg" />
+        </app-primary-input>
+        <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+        >
+        <img src="/assets/svg/password.svg" />
+    </app-primary-input>
+    <span>forgot password</span>
+    </form>
+</app-login-layout>
